@@ -1,11 +1,11 @@
-h3 Save Output
+h3 Capture Output
 
 .form-line
     .header
-        .title Automatically save output for new tabs
+        .title Automatically save capture for new tabs
         .description Stores complete session logs in a directory
     select.form-control(
-        [(ngModel)]='config.store.saveOutput.autoSave',
+        [(ngModel)]='config.store.captureOutput.autoSave',
         (ngModelChange)='config.save()'
     )
         option(ngValue='on') On
@@ -13,7 +13,7 @@ h3 Save Output
         option(ngValue='off') Off
 
 
-.form-line(*ngIf='config.store.saveOutput.autoSave !== "off"')
+.form-line(*ngIf='config.store.captureOutput.autoSave !== "off"')
     .header
         .title Directory
         .description Destination path for the logs
@@ -21,7 +21,7 @@ h3 Save Output
         input.form-control(
             type='text',
             placeholder='Home directory',
-            [(ngModel)]='config.store.saveOutput.autoSaveDirectory',
+            [(ngModel)]='config.store.captureOutput.autoSaveDirectory',
             (ngModelChange)='config.save()'
         )
         .input-group-append

@@ -3,7 +3,7 @@ import { ConfigProvider } from 'tabby-core'
 /** @hidden */
 export class SaveOutputConfigProvider extends ConfigProvider {
     defaults = {
-        saveOutput: {
+        captureOutput: {
             autoSave: 'off',
             autoSaveDirectory: null,
         },

@@ -22,7 +22,7 @@ export class SaveOutputSettingsTabComponent {
             }
         )).filePaths
         if (paths[0]) {
-            this.config.store.saveOutput.autoSaveDirectory = paths[0]
+            this.config.store.captureOutput.autoSaveDirectory = paths[0]
             this.config.save()
         }
     }

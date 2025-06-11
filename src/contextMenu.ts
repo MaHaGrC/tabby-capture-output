@@ -23,7 +23,7 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
     async getItems (tab: BaseTerminalTabComponent): Promise<MenuItemOptions[]> {
         return [
             {
-                label: 'Save output to file...',
+                label: 'Capture output to file...',
                 click: () => {
                     setTimeout(() => {
                         this.start(tab)
@@ -48,7 +48,7 @@ export class SaveOutputContextMenu extends TerminalContextMenuItemProvider {
         }
 
         let ui: HTMLElement = document.createElement('div')
-        ui.classList.add('save-output-ui')
+        ui.classList.add('capture-output-ui')
         tab.element.nativeElement.querySelector('.content').appendChild(ui)
         ui.innerHTML = require('./ui.pug')
 

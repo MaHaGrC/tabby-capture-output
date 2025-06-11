@@ -11,7 +11,7 @@ module.exports = {
     filename: 'index.js',
     pathinfo: true,
     libraryTarget: 'umd',
-    devtoolModuleFilenameTemplate: 'webpack-tabby-save-output:///[resource-path]',
+    devtoolModuleFilenameTemplate: 'webpack-tabby-capture-output:///[resource-path]',
   },
   resolve: {
     modules: ['.', 'src', 'node_modules'].map(x => path.join(__dirname, x)),

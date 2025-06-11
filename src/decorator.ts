@@ -17,7 +17,7 @@ export class SaveOutputDecorator extends TerminalDecorator {
     }
 
     attach (tab: BaseTerminalTabComponent): void {
-        if (this.config.store.saveOutput.autoSave === 'off' || this.config.store.saveOutput.autoSave === 'ssh' && !(tab instanceof SSHTabComponent)) {
+        if (this.config.store.captureOutput.autoSave === 'off' || this.config.store.captureOutput.autoSave === 'ssh' && !(tab instanceof SSHTabComponent)) {
             return
         }
 
@@ -63,7 +63,7 @@ export class SaveOutputDecorator extends TerminalDecorator {
     }
 
     private generatePath (tab: BaseTerminalTabComponent): string {
-        let outputPath = this.config.store.saveOutput.autoSaveDirectory || os.homedir()
+        let outputPath = this.config.store.captureOutput.autoSaveDirectory || os.homedir()
         let outputName = new Date().toISOString() + ' - ' + (tab.customTitle || tab.title || 'Untitled') + '.txt'
         outputName = sanitizeFilename(outputName)
         return path.join(outputPath, outputName)

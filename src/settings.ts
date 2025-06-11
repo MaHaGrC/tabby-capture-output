@@ -6,9 +6,9 @@ import { SaveOutputSettingsTabComponent } from './settingsTab.component'
 /** @hidden */
 @Injectable()
 export class SaveOutputSettingsTabProvider extends SettingsTabProvider {
-    id = 'save-output'
+    id = 'capture-output'
     icon = 'download'
-    title = 'Save Output'
+    title = 'Capture Output'
 
     getComponentType (): any {
         return SaveOutputSettingsTabComponent
